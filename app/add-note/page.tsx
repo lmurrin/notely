@@ -6,7 +6,7 @@ import PageHero from "../components/PageHero";
 export default function AddNote() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [owner, setOwner] = useState("40mducwk4dp321f"); // Update with actual owner logic if needed
+  const [owner, setOwner] = useState("40mducwk4dp321f");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 

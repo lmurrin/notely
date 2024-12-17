@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HomepageHero() {
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-base-200 h-1/2 py-52">
       <div className="hero-content text-center">
         <div className="max-w-md">
           <h1 className="text-5xl font-bold">Note-ly</h1>

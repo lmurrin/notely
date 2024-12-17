@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PageHero from "../components/PageHero";
+
 import { format, formatDistanceToNow } from "date-fns";
 
 async function getNotes() {
@@ -15,9 +15,10 @@ export default async function Notes() {
 
   return (
     <>
-      <PageHero title="Your notes" />
       <div className="container w-10/12 mx-auto py-6">
         <div className="overflow-x-auto">
+          <h1 className="font-bold text mb-6 text-xl">Your notes</h1>
+          <div className="divider"></div>
           <table className="table">
             <thead>
               <tr>
@@ -40,15 +41,16 @@ export default async function Notes() {
 }
 
 function Note({ note }: any) {
-  const {id, title, content, created, updated} = note || {}:
+  const { id, title, content, created, updated } = note || {};
   return (
-    <tr>
-       <th><Link href={`/notes/${id}`}>{title}</Link></th>
+    <tr className="hover">
+      <th>
+        <Link href={`/notes/${id}`}>{title}</Link>
+      </th>
       <td>{content}</td>
       <td>{formatDate(created)}</td>
       <td>{formatDate(updated)}</td>
     </tr>
-
   );
 }
 
